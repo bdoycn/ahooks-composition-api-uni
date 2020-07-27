@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig",
+    "octref.vetur",
+    "naumovs.color-highlight",
+    "kisstkondoros.vscode-codemetrics",
+    "mrmlnc.vscode-scss",
+    "formulahendry.auto-complete-tag",
+    "bdoycn.project-dictionary"
+  ]
+}
