@@ -1392,6 +1392,22 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@mengjing/eslint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mengjing/eslint-config/-/eslint-config-1.0.0.tgz#1e8bb7b22ebdf9be469be6c3ea594cbff9851b52"
+  integrity sha512-SY98/fDxrNRPqsOVhUbz8KJHiPniFyUM5F+3wJTkd7E53PszAcnMt8hnWWGHtMzNzADcjtMXIOdt8OVnn4s/Ig==
+  dependencies:
+    eslint-plugin-vue "^6.2.2"
+
+"@mengjing/stylelint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mengjing/stylelint-config/-/stylelint-config-1.0.0.tgz#1caa49434b105e24d219daa0c3a75d884e8a3557"
+  integrity sha512-5V6FOaItA3itFuF9oAsidxM4UL0I4/fMiJNY0hK1Nd8zc/TbrsilwNenkJDI4ibdCRTu/UmcGO/4ZIOnmSkWsQ==
+  dependencies:
+    stylelint-config-rational-order "^0.1.2"
+    stylelint-config-recommended-scss "^4.2.0"
+    stylelint-scss "^3.18.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4569,8 +4585,8 @@ eslint-loader@^2.2.1:
 
 eslint-plugin-vue@^6.2.2:
   version "6.2.2"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-vue/download/eslint-plugin-vue-6.2.2.tgz#27fecd9a3a24789b0f111ecdd540a9e56198e0fe"
-  integrity sha1-J/7NmjokeJsPER7N1UCp5WGY4P4=
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-6.2.2.tgz#27fecd9a3a24789b0f111ecdd540a9e56198e0fe"
+  integrity sha512-Nhc+oVAHm0uz/PkJAWscwIT4ijTrK5fqNqz9QB1D35SbbuMG1uB6Yr5AJpvPSWg+WOw7nYNswerYh0kOk64gqQ==
   dependencies:
     natural-compare "^1.4.0"
     semver "^5.6.0"
@@ -10881,7 +10897,7 @@ stylelint-config-rational-order@^0.1.2:
     stylelint "^9.10.1"
     stylelint-order "^2.2.1"
 
-stylelint-config-recommended-scss@^4.0.0:
+stylelint-config-recommended-scss@^4.0.0, stylelint-config-recommended-scss@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-4.2.0.tgz#3ad3fc858215cfd16a0f90aecf1ac0ea8a3e6971"
   integrity sha512-4bI5BYbabo/GCQ6LbRZx/ZlVkK65a1jivNNsD+ix/Lw0U3iAch+jQcvliGnnAX8SUPaZ0UqzNVNNAF3urswa7g==
@@ -11921,8 +11937,8 @@ vm-browserify@^1.0.1:
 
 vue-eslint-parser@^7.0.0:
   version "7.1.0"
-  resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-7.1.0.tgz#9cdbcc823e656b087507a1911732b867ac101e83"
-  integrity sha1-nNvMgj5lawh1B6GRFzK4Z6wQHoM=
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.1.0.tgz#9cdbcc823e656b087507a1911732b867ac101e83"
+  integrity sha512-Kr21uPfthDc63nDl27AGQEhtt9VrZ9nkYk/NTftJ2ws9XiJwzJJCnCr3AITQ2jpRMA0XPGDECxYH8E027qMK9Q==
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.0.0"

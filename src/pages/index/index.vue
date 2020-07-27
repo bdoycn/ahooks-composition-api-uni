@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" @click="handle" />
+    <image class="logo" src="/static/logo.png" @click="console.log(1)" />
     <view>
       <text class="title">{{ title }}</text>
     </view>
@@ -21,17 +21,18 @@ export default {
 <style lang="scss">
 @mixin reset-list {
   filter: drop-shadow(2px 4px 6px red);
-};
+}
 
 .content {
   @include reset-list();
 
   position: absolute;
-  display: flex;
 
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   color: red;
 }
 

@@ -23,5 +23,4 @@ yarn-error.log*
 *.sw*
 
 # Preset file
-postcss.config.js
-babel.config.js
+*.config.js
