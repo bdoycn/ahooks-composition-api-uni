@@ -1,12 +1,13 @@
 module.exports = {
   root: true,
 
-  extends: [
-    '@mengjing/eslint-config/vue'
+  'extends': [
+    '@mengjing/eslint-config/vue',
+    '@vue/typescript'
   ],
 
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
   },
 
   overrides: [
@@ -19,5 +20,5 @@ module.exports = {
         jest: true
       }
     }
-  ]
+  ],
 }
