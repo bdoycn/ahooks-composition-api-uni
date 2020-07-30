@@ -76,7 +76,7 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-27920200618002",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-27920200618002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-27920200618002",
-    "@mengjing/eslint-config": "^1.1.0",
+    "@mengjing/eslint-config": "^1.2.0",
     "@types/jest": "^24.0.19",
     "@types/lodash-es": "^4.17.3",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
