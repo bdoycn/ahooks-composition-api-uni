@@ -3,7 +3,8 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-// App.mpType = 'app'
+// @ts-ignore
+App.mpType = 'app'
 
 const app = new Vue({
   ...App,

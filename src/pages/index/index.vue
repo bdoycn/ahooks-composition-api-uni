@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" @click="console.log(1)" />
+    <image class="logo" src="@/assets/images/logo.png" @click="console.log(1)" />
     <view>
       <text class="title">{{ title }}</text>
     </view>
