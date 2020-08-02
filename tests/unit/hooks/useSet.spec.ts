@@ -1,4 +1,6 @@
 import useSet from '@/hooks/useSet'
+import { shallowMount } from '@vue/test-utils'
+import UseSet from './template/UseSet.vue'
 
 describe('useSet', () => {
   function hasValues(set: Set<any>, values: any[]) {
@@ -75,5 +77,17 @@ describe('useSet', () => {
 
     expect(has(1)).toBe(true)
     expect(has(2)).toBe(false)
+  })
+})
+
+describe('useSet vue', () => {
+  it('basic usage', async () => {
+    const wrapper = shallowMount(UseSet)
+    wrapper.find('#addSetItem').trigger('click')
+    wrapper.find('#addSetItem').trigger('click')
+
+    await wrapper.vm.$nextTick()
+    const setItems = wrapper.findAll('.set-item')
+    expect(setItems.length).toBe(2)
   })
 })
