@@ -114,7 +114,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "eslint --fix --ext .ts,.vue ."
+      "pre-commit": "eslint --fix --ext .ts,.vue --quiet --cache ."
     }
   },
   "uni-app": {
