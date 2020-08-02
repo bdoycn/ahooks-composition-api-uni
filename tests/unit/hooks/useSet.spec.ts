@@ -10,14 +10,14 @@ describe('useSet', () => {
   it('basic usage', () => {
     const [set] = useSet()
 
-    expect(set).toBeInstanceOf(Set)
+    expect(set.value).toBeInstanceOf(Set)
   })
 
   it('initial value', () => {
     const [set] = useSet([1, 1, '1'])
 
-    hasValues(set, [1, '1'])
-    expect(set.size).toBe(2)
+    hasValues(set.value, [1, '1'])
+    expect(set.value.size).toBe(2)
   })
 
   it('object value', () => {
@@ -27,8 +27,8 @@ describe('useSet', () => {
 
     const [set] = useSet([obj1, obj1Copy, obj2])
 
-    hasValues(set, [obj1, obj2])
-    expect(set.size).toBe(2)
+    hasValues(set.value, [obj1, obj2])
+    expect(set.value.size).toBe(2)
   })
 
   it('add', () => {
@@ -37,8 +37,8 @@ describe('useSet', () => {
     add(1)
     add(2)
 
-    hasValues(set, [1, 2])
-    expect(set.size).toBe(2)
+    hasValues(set.value, [1, 2])
+    expect(set.value.size).toBe(2)
   })
 
   it('has', () => {
