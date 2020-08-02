@@ -1542,10 +1542,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@mengjing/eslint-config@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@mengjing/eslint-config/-/eslint-config-1.2.0.tgz#3b534cbca4e9191565a5c8911857c6e53acb8152"
-  integrity sha512-pWRPFnUzKKFTvdOyPVVTnvCDh8cTSm1kwb8NJotQk1877jL3XlH1NBq8yANvmnMu7beQJECT2n0J1rZQLfwFYA==
+"@mengjing/eslint-config@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@mengjing/eslint-config/-/eslint-config-1.2.2.tgz#e2ce960b4aa9b45582227601c5f2aad8634231c4"
+  integrity sha512-PXaGVxMdB3sTx3lH3Azec58/Z0EbkRSOFQBc87DoR4Gmwzsw+UCVtp+DDCwe+eMKetZuZQFrYWso0VliaoW2Pg==
   dependencies:
     eslint-plugin-vue "^6.2.2"
 
