@@ -1,3 +1,5 @@
+import { isReactive, reactive } from '@vue/composition-api'
+
 function useTemplateData(initialValue: Record<string, any> = {}) {
   const templateData = { ...initialValue }
 
@@ -13,8 +15,21 @@ function useTemplateData(initialValue: Record<string, any> = {}) {
     Object.assign(templateData, data)
   }
 
+  function addTemplateDataBlock(key: string, value: Record<string, any>): void
+  function addTemplateDataBlock(key: string, fn: () => Record<string, any>): void
+  function addTemplateDataBlock(
+    key: string,
+    value: Record<string, any> | (() => Record<string, any>),
+  ) {
+    const realValue: Record<string, any>
+      = typeof value === 'function' ? value() : value
+    const reactiveRealValue = isReactive(realValue) ? realValue : reactive(realValue)
 
-  return [templateData, { addTemplateData }] as const
+    templateData[key] = reactiveRealValue
+  }
+
+
+  return [templateData, { addTemplateData, addTemplateDataBlock }] as const
 }
 
 export default useTemplateData

@@ -1,4 +1,5 @@
 import useTemplateData from '@/hooks/useTemplateData'
+import { reactive } from '@vue/composition-api'
 
 describe('useTemplateData', () => {
   it('basic usage', () => {
@@ -23,5 +24,21 @@ describe('useTemplateData', () => {
     addTemplateData({ b: 2, c: 3, d: 4, e: 5 })
 
     expect(templateData).toEqual({ a: 1, b: 2, c: 3, d: 4, e: 5 })
+  })
+
+  it('add data block by object', () => {
+    const [templateData, { addTemplateDataBlock }] = useTemplateData({ a: 1 })
+
+    addTemplateDataBlock('block', { b: 2, c: 3, d: 4, e: 5 })
+
+    expect(templateData).toEqual({ a: 1, block: { b: 2, c: 3, d: 4, e: 5 } })
+  })
+
+  it('add data block', () => {
+    const [templateData, { addTemplateDataBlock }] = useTemplateData({ a: 1 })
+
+    addTemplateDataBlock('block', () => ({ b: 2, c: 3, d: 4, e: 5 }))
+
+    expect(templateData).toEqual({ a: 1, block: { b: 2, c: 3, d: 4, e: 5 } })
   })
 })
