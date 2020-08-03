@@ -3,4 +3,7 @@ module.exports = {
   setupFiles: [
     '<rootDir>/tests/unit/setupTest.ts'
   ],
+  transformIgnorePatterns: [
+    "/!node_modules\\/lodash-es/"
+  ],
 }
