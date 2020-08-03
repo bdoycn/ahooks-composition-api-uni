@@ -1,6 +1,6 @@
 <template>
   <view>
-    <view id="addSetItem" @click="addSet(Date.now())">add set item</view>
+    <view id="addSetItem" @click="addSet(Math.random())">add set item</view>
     <view>
       <text
         v-for="item of set"
