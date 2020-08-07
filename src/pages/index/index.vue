@@ -1,19 +1,53 @@
 <template>
   <view class="content">
     <image class="logo" src="@/assets/images/logo.png" @click="console.log(1)" />
+    <button
+      @click="addSet(Date.now())"
+    >
+      add set
+    </button>
+    <input v-model="title.text" type="text" />
+    <input v-model="title2Obj.title" type="text" />
     <view>
-      <text class="title">{{ title }}</text>
+      <text class="title">{{ title.text }}</text>
+      <text class="title">{{ title2Obj.title }}</text>
+      <view
+        v-for="item of set"
+        :key="item"
+        class="title"
+      >
+        {{ item }}
+      </view>
     </view>
   </view>
 </template>
 
-<script>
+<script lang="ts">
+import { ref, reactive } from '@vue/composition-api'
+import useSet from '@/hooks/useSet'
+import useTemplateData from '@/hooks/useTemplateData'
+import useWhyDidYouUpdate from '@/hooks/useWhyDidYouUpdate'
+
 export default {
-  data() {
-    return { title: 'Hello' }
-  },
-  onLoad() {
-    //
+  setup() {
+    const [templateData, { addTemplateData }] = useTemplateData()
+
+    const title = ref({ text: 'HelloWorld' })
+    addTemplateData('title', title)
+
+    const [set, { add: addSet }] = useSet([1, 2, 3])
+    addTemplateData({
+      set,
+      addSet,
+    })
+
+    const title2Obj = reactive({
+      title: '1',
+    })
+    addTemplateData('title2Obj', title2Obj)
+
+    useWhyDidYouUpdate('index', templateData)
+    return templateData
   },
 }
 </script>

@@ -1,8 +1,29 @@
 {
   "name": "ahooks-composition-api-uni",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "bdoycn",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "uni",
+    "vue-composition-api"
+  ],
+  "homepage": "https://github.com/bdoycn/ahooks-composition-api-uni",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bdoycn/ahooks-composition-api-uni"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build-rollup": "rollup -c",
+    "clean": "rimraf ./dist",
+    "build-npm": "npm run clean && npm run build-rollup",
+    "prepublishOnly": "npm run build-npm",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "test:unit": "vue-cli-service test:unit",
@@ -42,6 +63,11 @@
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
   },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0-beta.6",
+    "vue": "^2.6.11",
+    "vuex": "^3.2.0"
+  },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-27920200618002",
     "@dcloudio/uni-h5": "^2.0.0-27920200618002",
@@ -55,15 +81,10 @@
     "@dcloudio/uni-quickapp-native": "^2.0.0-27920200618002",
     "@dcloudio/uni-quickapp-webview": "^2.0.0-27920200618002",
     "@dcloudio/uni-stat": "^2.0.0-27920200618002",
-    "@mengjing/stylelint-config": "^1.0.0",
-    "@vue/composition-api": "^1.0.0-beta.6",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
     "lodash-es": "^4.17.15",
-    "regenerator-runtime": "^0.12.1",
-    "stylelint-scss": "^3.18.0",
-    "vue": "^2.6.11",
-    "vuex": "^3.2.0"
+    "regenerator-runtime": "^0.12.1"
   },
   "devDependencies": {
     "@dcloudio/types": "*",
@@ -77,6 +98,7 @@
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-27920200618002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-27920200618002",
     "@mengjing/eslint-config": "^1.2.2",
+    "@mengjing/stylelint-config": "^1.0.0",
     "@types/jest": "^24.0.19",
     "@types/lodash-es": "^4.17.3",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
@@ -86,6 +108,7 @@
     "@vue/cli-plugin-typescript": "~4.4.0",
     "@vue/cli-plugin-unit-jest": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
+    "@vue/composition-api": "^1.0.0-beta.6",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^1.0.3",
     "@wemake-services/stylelint-config-scss": "^0.4.1",
@@ -99,14 +122,19 @@
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.27.1",
     "sass": "^1.26.10",
     "sass-loader": "^8.*",
     "stylelint": "^13.6.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "typescript": "~3.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "vuex": "^3.2.0"
   },
   "browserslist": [
     "Android >= 4",
