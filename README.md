@@ -1,19 +1,25 @@
-# uni-template
+# ahooks-composition-api-uni
+vue-composition-api Hooks Library (uniapp 版本)
 
-## Project setup
+## 📦 安装
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+yarn install ahooks-composition-api-uni
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+## 使用
+```js
+import { useTemplateData } from 'ahooks-composition-api-uni'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 📚 API
+* useBoolean
+* useCounter
+* useDebounce
+* useStorageState
+* useLocalStorageState
+* useSessionStorageState
+* useSet
+* useSleep
+* useTemplateData
+* useToggle
+* useWhyDidYouUpdate
