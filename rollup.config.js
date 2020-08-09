@@ -1,15 +1,17 @@
-import path from  'path'
 import ts from 'rollup-plugin-typescript2'
 
 const tsPlugin = ts({
-  check: true,
-  tsconfig: path.resolve(__dirname, 'tsconfig.json'),
-  cacheRoot: path.resolve(__dirname, 'node_modules/.rts2_cache'),
+  typescript: require('ttypescript'),
+  check: false,
   tsconfigOverride: {
     compilerOptions: {
       sourceMap: false,
       declaration: true,
       declarationMap: false,
+      plugins: [
+        { "transform": "typescript-transform-paths" },
+        { "transform": "typescript-transform-paths", "afterDeclarations": true }
+      ],
     },
     exclude: ['**/__tests__', 'tests']
   }
